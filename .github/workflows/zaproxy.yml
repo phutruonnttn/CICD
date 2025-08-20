@@ -3,9 +3,9 @@ name: ZAP scan
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "master" ]
 
 jobs:
   zap_scan:
@@ -15,7 +15,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          ref: main
+          ref: master
       - name: ZAP Scan
         uses: zaproxy/action-full-scan@v0.12.0
         with:
